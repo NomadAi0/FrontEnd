@@ -385,7 +385,7 @@ export default function JobListing() {
           Recruitment notice: all communication only happens from authorized
           email addresses ending in <strong>@nomad.ai</strong>. We never ask for
           payments or sensitive documents. Suspect a scam?{" "}
-          <a href="mailto:contact@nomad.ai">contact@nomad.ai</a>.
+          <a href="mailto:contactNomadAi@proton.me">contact@nomadai.online</a>.
         </p>
       </div>
     </div>
