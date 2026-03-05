@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useEffect } from "react";
 
 const jobData = {
   id: "job_001",
@@ -134,6 +135,13 @@ function Section({ title, children }: SectionProps) {
 
 export default function JobListing() {
   const job = jobData;
+
+  useEffect(() => {
+    document.title = "Senior Software Engineer - Full Stack | Nomad.AI";
+    return () => {
+      document.title = "Nomad.AI - Gaming News, Leaks & Job Opportunities";
+    };
+  }, []);
 
   const labelStyle = {
     fontWeight: 700,

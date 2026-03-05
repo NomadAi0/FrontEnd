@@ -1,34 +1,4 @@
-import React from "react";
-
-interface BadgeProps {
-  children: React.ReactNode;
-  color?: string;
-  textColor?: string;
-}
-
-function Badge({
-  children,
-  color = "#e8f0fe",
-  textColor = "#1a56db",
-}: BadgeProps) {
-  return (
-    <span
-      style={{
-        display: "inline-block",
-        padding: "2px 10px",
-        borderRadius: "12px",
-        fontSize: "12px",
-        fontWeight: 600,
-        background: color,
-        color: textColor,
-        marginRight: "6px",
-        marginBottom: "4px",
-      }}
-    >
-      {children}
-    </span>
-  );
-}
+import React, { useEffect } from "react";
 
 interface SectionProps {
   title: string;
@@ -58,6 +28,13 @@ function Section({ title, children }: SectionProps) {
 }
 
 const TrafficGrowthJD = () => {
+  useEffect(() => {
+    document.title = "Traffic Growth Associate - Job Opportunity | Nomad.AI";
+    return () => {
+      document.title = "Nomad.AI - Gaming News, Leaks & Job Opportunities";
+    };
+  }, []);
+
   return (
     <div
       style={{
