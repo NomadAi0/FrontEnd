@@ -7,17 +7,21 @@ import TrafficGrowthJD from "./components/JobListings/TrafficGrowthJD.tsx";
 import GTA6LeakGP from "./components/JobListings/GTA6LeakGP.tsx";
 import PageTracker from "./analytics/PageTracker.tsx";
 import WarBlog from "./components/NewsBlog/war.tsx";
+import GTA6CodeLeak from "./components/NewsBlog/GTA6CodeLeak.tsx";
+import AdOptOutBanner from "./components/AdOptOutBanner";
 
 function App() {
   return (
     <Provider store={store}>
       <HashRouter>
+        <AdOptOutBanner />
         <PageTracker />
         <Routes>
           <Route path="/" element={<JobListing />} />
           <Route path="/Home/JobDescription" element={<TrafficGrowthJD />} />
           <Route path="/gta6-leak" element={<GTA6LeakGP />} />
           <Route path="/war-blog" element={<WarBlog />} />
+          <Route path="/gta6-code-leak" element={<GTA6CodeLeak />} />
         </Routes>
       </HashRouter>
     </Provider>
