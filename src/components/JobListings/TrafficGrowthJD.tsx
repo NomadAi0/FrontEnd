@@ -1,4 +1,5 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
+import AdOptOutBanner from "../AdOptOutBanner";
 
 interface SectionProps {
   title: string;
@@ -49,6 +50,7 @@ const TrafficGrowthJD = () => {
         boxSizing: "border-box",
       }}
     >
+      <AdOptOutBanner />
       <div
         style={{
           background: "#ffffff",

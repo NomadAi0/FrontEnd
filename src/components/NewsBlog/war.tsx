@@ -1,43 +1,76 @@
 import { useState, useEffect, useRef } from "react";
+import AdOptOutBanner from "../AdOptOutBanner";
 
 function SEOHead() {
   useEffect(() => {
     document.title = "The World Is At War — Again | The Nomad Review";
     const setMeta = (name: string, content: string, prop = false) => {
       const attr = prop ? "property" : "name";
-      let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
-      if (!el) { el = document.createElement("meta"); el.setAttribute(attr, name); document.head.appendChild(el); }
+      let el = document.querySelector(
+        `meta[${attr}="${name}"]`,
+      ) as HTMLMetaElement;
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, name);
+        document.head.appendChild(el);
+      }
       el.content = content;
     };
-    setMeta("description", "An unflinching look at the wars reshaping our world in 2026 — the US-Israel strikes on Iran, the grinding war in Ukraine, the forgotten catastrophe in Sudan, and what it all means for the global order.");
-    setMeta("keywords", "Iran war 2026, US Israel Iran strikes, Ukraine war 2026, Sudan civil war, global conflicts 2026, Operation Epic Fury, Middle East war, Strait of Hormuz, Khamenei death, war news");
+    setMeta(
+      "description",
+      "An unflinching look at the wars reshaping our world in 2026 — the US-Israel strikes on Iran, the grinding war in Ukraine, the forgotten catastrophe in Sudan, and what it all means for the global order.",
+    );
+    setMeta(
+      "keywords",
+      "Iran war 2026, US Israel Iran strikes, Ukraine war 2026, Sudan civil war, global conflicts 2026, Operation Epic Fury, Middle East war, Strait of Hormuz, Khamenei death, war news",
+    );
     setMeta("robots", "index, follow");
     setMeta("author", "The Nomad Review");
     setMeta("viewport", "width=device-width, initial-scale=1");
     setMeta("og:title", "The World Is At War — Again | The Nomad Review", true);
-    setMeta("og:description", "From Tehran to Kyiv to Khartoum — a sharp editorial on every major conflict burning right now, and what they mean for the rest of us.", true);
+    setMeta(
+      "og:description",
+      "From Tehran to Kyiv to Khartoum — a sharp editorial on every major conflict burning right now, and what they mean for the rest of us.",
+      true,
+    );
     setMeta("og:type", "article", true);
     setMeta("og:site_name", "The Nomad Review", true);
     setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", "The World Is At War — Again | The Nomad Review");
-    setMeta("twitter:description", "Iran. Ukraine. Sudan. Myanmar. The world is burning on multiple fronts. Here's everything you need to know.");
+    setMeta(
+      "twitter:description",
+      "Iran. Ukraine. Sudan. Myanmar. The world is burning on multiple fronts. Here's everything you need to know.",
+    );
     setMeta("article:published_time", "2026-03-06T09:00:00Z");
     setMeta("article:section", "War & Conflict");
 
     const schema = {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
-      "headline": "The World Is At War — Again",
-      "description": "An unflinching editorial on every major conflict burning in 2026.",
-      "author": { "@type": "Organization", "name": "The Nomad Review" },
-      "publisher": { "@type": "Organization", "name": "The Nomad Review" },
-      "datePublished": "2026-03-06",
-      "dateModified": "2026-03-06",
-      "articleSection": "War & Conflict",
-      "keywords": ["Iran war", "Ukraine", "Sudan", "Myanmar", "Middle East", "global conflict 2026"]
+      headline: "The World Is At War — Again",
+      description:
+        "An unflinching editorial on every major conflict burning in 2026.",
+      author: { "@type": "Organization", name: "The Nomad Review" },
+      publisher: { "@type": "Organization", name: "The Nomad Review" },
+      datePublished: "2026-03-06",
+      dateModified: "2026-03-06",
+      articleSection: "War & Conflict",
+      keywords: [
+        "Iran war",
+        "Ukraine",
+        "Sudan",
+        "Myanmar",
+        "Middle East",
+        "global conflict 2026",
+      ],
     };
     let ld = document.querySelector("#ld-json") as HTMLScriptElement;
-    if (!ld) { ld = document.createElement("script"); ld.id = "ld-json"; ld.type = "application/ld+json"; document.head.appendChild(ld); }
+    if (!ld) {
+      ld = document.createElement("script");
+      ld.id = "ld-json";
+      ld.type = "application/ld+json";
+      document.head.appendChild(ld);
+    }
     ld.textContent = JSON.stringify(schema);
   }, []);
   return null;
@@ -50,7 +83,8 @@ const conflicts = [
     labelBg: "#c0392b",
     theater: "Middle East",
     headline: "Operation Epic Fury: The War Nobody Voted For",
-    subhead: "On February 28, the United States and Israel launched strikes on Iran. Six days later, the Middle East is on fire — and nobody has an exit plan.",
+    subhead:
+      "On February 28, the United States and Israel launched strikes on Iran. Six days later, the Middle East is on fire — and nobody has an exit plan.",
     lede: `It began before most of the world woke up. In the early hours of February 28, 2026, a coordinated barrage of US and Israeli missiles struck Tehran — targeting Iran's supreme leader compound, military installations, and nuclear infrastructure. By morning, Supreme Leader Ali Khamenei was dead. The Middle East had not seen a moment like it since the fall of Saddam Hussein.`,
     body: [
       `What followed was swift, brutal, and is still unfolding. Iran retaliated with over 500 ballistic missiles and nearly 2,000 drones, aimed at both Israeli territory and the 27 US military bases spread across the Gulf. Kuwait has intercepted 178 ballistic missiles and 384 drones. The UAE intercepted 169 missiles. Bahrain, Qatar, and Saudi Arabia have all reported strikes on their territory. An Iranian ballistic missile struck the Al Udeid air base in Qatar — home to the forward headquarters of US Central Command. Qatar Airways has suspended all flights. Schools are closed.`,
@@ -63,9 +97,11 @@ const conflicts = [
       { value: "2,000+", label: "Iranian drones & missiles launched" },
       { value: "20%", label: "of world oil at risk via Hormuz" },
     ],
-    quote: "The US and Israel have successfully destroyed a significant portion of Iran's military capabilities. With air supremacy achieved, Israeli and US jets are able to fly uncontested over Iranian territory.",
+    quote:
+      "The US and Israel have successfully destroyed a significant portion of Iran's military capabilities. With air supremacy achieved, Israeli and US jets are able to fly uncontested over Iranian territory.",
     quoteSource: "— US & Western officials, March 2026",
-    pullLine: "There is no clear exit strategy. The Strait of Hormuz has shut down. Oil markets are in freefall.",
+    pullLine:
+      "There is no clear exit strategy. The Strait of Hormuz has shut down. Oil markets are in freefall.",
   },
   {
     id: "ukraine",
@@ -73,7 +109,8 @@ const conflicts = [
     labelBg: "#2c5f8a",
     theater: "Eastern Europe",
     headline: "Ukraine: The War the World Stopped Watching",
-    subhead: "Russia's invasion is now in its fourth year. The front lines have barely moved. The cost has been staggering. And now Ukraine is being asked to help fight someone else's war.",
+    subhead:
+      "Russia's invasion is now in its fourth year. The front lines have barely moved. The cost has been staggering. And now Ukraine is being asked to help fight someone else's war.",
     lede: `Four years into the largest land war in Europe since 1945, the conflict in Ukraine has settled into a grim stalemate that neither side can break and neither side will end. Heavy fighting continues in the Donbas. Russian missile and drone strikes on Ukrainian infrastructure are a near-daily reality. And Western military aid — once flowing freely — has become entangled in the politics of a changed Washington.`,
     body: [
       `The numbers are almost too large to absorb. Hundreds of thousands of casualties on both sides. Millions displaced. Ukraine's energy grid has been systematically destroyed and rebuilt, destroyed and rebuilt, in a grinding war of attrition that Moscow has calculated it can sustain longer than Kyiv can endure. Russia captured Bakhmut in 2023 at enormous cost — a symbolic gain that illustrated the brutal arithmetic of this conflict: every kilometer of ground costs thousands of lives.`,
@@ -85,9 +122,11 @@ const conflicts = [
       { value: "Millions", label: "displaced inside Ukraine" },
       { value: "50%", label: "even odds of Russia-NATO clash in 2026" },
     ],
-    quote: "Peace talks have been discussed multiple times, but a permanent solution has not yet been reached.",
+    quote:
+      "Peace talks have been discussed multiple times, but a permanent solution has not yet been reached.",
     quoteSource: "— Global conflict analysts, 2026",
-    pullLine: "Ukraine is fighting for its survival while being asked to share its drone expertise with a war on the other side of the world.",
+    pullLine:
+      "Ukraine is fighting for its survival while being asked to share its drone expertise with a war on the other side of the world.",
   },
   {
     id: "sudan",
@@ -95,7 +134,8 @@ const conflicts = [
     labelBg: "#7d4a1a",
     theater: "Northeast Africa",
     headline: "Sudan: The War the Cameras Don't Show",
-    subhead: "More than two years into a civil war that has produced some of the worst atrocities of the 21st century, Sudan remains nearly invisible in the Western news cycle.",
+    subhead:
+      "More than two years into a civil war that has produced some of the worst atrocities of the 21st century, Sudan remains nearly invisible in the Western news cycle.",
     lede: `In October 2025, the Rapid Support Forces — a paramilitary group that grew from the same militias that carried out the Darfur genocide — seized the town of El Fasher. What followed was a killing spree. Gruesome footage circulated on social media. The UN and human rights groups issued urgent warnings. The world largely looked away.`,
     body: [
       `Sudan's civil war erupted in April 2023, triggered by a power struggle within the military junta that had governed the country since the fall of Omar al-Bashir. The war pits the Sudanese Armed Forces against the RSF — a force that had grown enormously wealthy through gold trafficking and foreign contracts in Yemen. Both sides have committed atrocities. Both sides have received support from foreign powers pursuing their own interests in the region.`,
@@ -107,9 +147,11 @@ const conflicts = [
       { value: "Millions", label: "facing famine conditions" },
       { value: "0", label: "credible peace talks underway" },
     ],
-    quote: "Gruesome footage from Darfur, where the RSF went on a killing spree after seizing the town of El Fasher in late October, should spur greater efforts to end a war that remains largely ignored.",
+    quote:
+      "Gruesome footage from Darfur, where the RSF went on a killing spree after seizing the town of El Fasher in late October, should spur greater efforts to end a war that remains largely ignored.",
     quoteSource: "— International Crisis Group, January 2026",
-    pullLine: "The urgency with which the world responds to a conflict is determined not by the suffering of its victims, but by the strategic interests of the nations powerful enough to intervene.",
+    pullLine:
+      "The urgency with which the world responds to a conflict is determined not by the suffering of its victims, but by the strategic interests of the nations powerful enough to intervene.",
   },
   {
     id: "myanmar",
@@ -117,7 +159,8 @@ const conflicts = [
     labelBg: "#5a3a7e",
     theater: "Southeast Asia",
     headline: "Myanmar: The Most Fragmented War on Earth",
-    subhead: "Since a military coup in 2021 shattered a decade of democratic progress, Myanmar has descended into a conflict involving over 1,600 armed factions. It has produced over 80,000 deaths and three million displaced.",
+    subhead:
+      "Since a military coup in 2021 shattered a decade of democratic progress, Myanmar has descended into a conflict involving over 1,600 armed factions. It has produced over 80,000 deaths and three million displaced.",
     lede: `The military junta that seized power in Myanmar in February 2021 believed it could crush resistance quickly. Five years later, the Tatmadaw controls roughly one fifth of Myanmar's territory — down from near-total control at the start of the war. The country has fragmented into a patchwork of competing armed groups, ethnic militias, and resistance forces, making it arguably the most complex armed conflict on the planet.`,
     body: [
       `Over 80,000 people have been killed since 2021. More than three million are internally displaced, with another million having fled the country entirely. Myanmar, one of the poorest nations in Asia, is being destroyed not by one war but by dozens of overlapping ones, each with its own history, grievances, and goals.`,
@@ -129,9 +172,11 @@ const conflicts = [
       { value: "1,600+", label: "armed factions involved" },
       { value: "⅕", label: "of territory still held by junta" },
     ],
-    quote: "The current war is considered the most fragmented in the world, involving at least 1,600 different ethnic and political groups with a multitude of alliances and goals.",
+    quote:
+      "The current war is considered the most fragmented in the world, involving at least 1,600 different ethnic and political groups with a multitude of alliances and goals.",
     quoteSource: "— Conflict analysts, 2026",
-    pullLine: "Even disaster has been weaponised. The earthquake ceasefires were broken within days.",
+    pullLine:
+      "Even disaster has been weaponised. The earthquake ceasefires were broken within days.",
   },
 ];
 
@@ -139,19 +184,42 @@ function useInView(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold });
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
+      { threshold },
+    );
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
   }, []);
   return { ref, visible };
 }
 
-function ConflictCard({ conflict, index }: { conflict: typeof conflicts[0]; index: number }) {
+function ConflictCard({
+  conflict,
+  index,
+}: {
+  conflict: (typeof conflicts)[0];
+  index: number;
+}) {
   const { ref, visible } = useInView();
   return (
-    <div ref={ref} className={`conflict-card ${visible ? "visible" : ""}`} style={{ animationDelay: `${index * 0.05}s` }}>
+    <div
+      ref={ref}
+      className={`conflict-card ${visible ? "visible" : ""}`}
+      style={{ animationDelay: `${index * 0.05}s` }}
+    >
       <div className="card-header">
-        <span className="conflict-label" style={{ background: conflict.labelBg }}>{conflict.label}</span>
+        <span
+          className="conflict-label"
+          style={{ background: conflict.labelBg }}
+        >
+          {conflict.label}
+        </span>
         <span className="conflict-theater">{conflict.theater}</span>
       </div>
       <h2 className="conflict-headline">{conflict.headline}</h2>
@@ -167,14 +235,15 @@ function ConflictCard({ conflict, index }: { conflict: typeof conflicts[0]; inde
       <div className="conflict-body">
         <p className="lede-para">{conflict.lede}</p>
         {conflict.body.map((para, i) => {
-          if (i === 1) return (
-            <div key={i}>
-              <blockquote className="inline-quote">
-                <p>"{conflict.pullLine}"</p>
-              </blockquote>
-              <p>{para}</p>
-            </div>
-          );
+          if (i === 1)
+            return (
+              <div key={i}>
+                <blockquote className="inline-quote">
+                  <p>"{conflict.pullLine}"</p>
+                </blockquote>
+                <p>{para}</p>
+              </div>
+            );
           return <p key={i}>{para}</p>;
         })}
       </div>
@@ -193,7 +262,8 @@ export default function WarBlog() {
   useEffect(() => {
     setTimeout(() => setMounted(true), 80);
     const onScroll = () => {
-      const p = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      const p =
+        window.scrollY / (document.body.scrollHeight - window.innerHeight);
       setProgress(Math.min(100, p * 100));
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -202,6 +272,7 @@ export default function WarBlog() {
 
   return (
     <>
+      <AdOptOutBanner />
       <SEOHead />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
@@ -590,7 +661,10 @@ export default function WarBlog() {
 
       <header className="masthead" role="banner">
         <div className="masthead-name">The Nomad Review</div>
-        <div className="masthead-live"><span className="live-dot" />Live Coverage</div>
+        <div className="masthead-live">
+          <span className="live-dot" />
+          Live Coverage
+        </div>
         <div className="masthead-date">March 6, 2026 · War & Conflict</div>
       </header>
 
@@ -599,23 +673,37 @@ export default function WarBlog() {
           <div className={`hero ${mounted ? "visible" : ""}`}>
             <div className="hero-kicker">Special War Report · March 2026</div>
             <h1 className="hero-headline" itemProp="headline">
-              The World Is<br />At <span>War</span><br />— Again
+              The World Is
+              <br />
+              At <span>War</span>
+              <br />— Again
             </h1>
             <p className="hero-deck" itemProp="description">
-              Iran is burning. Ukraine grinds on into its fourth year. Sudan is being destroyed in near-total silence. Myanmar is fracturing into a thousand pieces. As of March 2026, there are nine major active armed conflicts on earth. Here is what is actually happening — and what it means.
+              Iran is burning. Ukraine grinds on into its fourth year. Sudan is
+              being destroyed in near-total silence. Myanmar is fracturing into
+              a thousand pieces. As of March 2026, there are nine major active
+              armed conflicts on earth. Here is what is actually happening — and
+              what it means.
             </p>
             <div className="hero-meta">
               <span itemProp="author">The Nomad Review Editorial Board</span>
               <span>·</span>
-              <time dateTime="2026-03-06" itemProp="datePublished">March 6, 2026</time>
+              <time dateTime="2026-03-06" itemProp="datePublished">
+                March 6, 2026
+              </time>
               <span>·</span>
               <span>16 min read</span>
               <span>·</span>
               <span itemProp="articleSection">War & Conflict</span>
             </div>
             <nav className="conflict-toc" aria-label="Conflict sections">
-              {conflicts.map(c => (
-                <a key={c.id} href={`#${c.id}`} className="toc-chip" style={{ textDecoration: "none" }}>
+              {conflicts.map((c) => (
+                <a
+                  key={c.id}
+                  href={`#${c.id}`}
+                  className="toc-chip"
+                  style={{ textDecoration: "none" }}
+                >
                   {c.theater}
                 </a>
               ))}
@@ -632,19 +720,50 @@ export default function WarBlog() {
             <div className="closing-block">
               <h2>What Comes Next</h2>
               <p>
-                Nine active armed conflicts. Millions displaced. A new war in the Middle East with no exit strategy. A grinding stalemate in Europe. Forgotten catastrophes in Africa and Asia. The world in March 2026 is more violent, more fragmented, and more unpredictable than at any point since the Cold War's end.
+                Nine active armed conflicts. Millions displaced. A new war in
+                the Middle East with no exit strategy. A grinding stalemate in
+                Europe. Forgotten catastrophes in Africa and Asia. The world in
+                March 2026 is more violent, more fragmented, and more
+                unpredictable than at any point since the Cold War's end.
               </p>
               <p>
-                What is most striking — and most alarming — is not the wars themselves. Wars, tragically, are a constant of human history. What is striking is the collapse of the mechanisms that once contained them: international institutions, diplomatic back-channels, the credibility of international law, the basic principle that civilian infrastructure cannot be a military target. Each of these guardrails is being dismantled, quietly or loudly, by the very powers that built them.
+                What is most striking — and most alarming — is not the wars
+                themselves. Wars, tragically, are a constant of human history.
+                What is striking is the collapse of the mechanisms that once
+                contained them: international institutions, diplomatic
+                back-channels, the credibility of international law, the basic
+                principle that civilian infrastructure cannot be a military
+                target. Each of these guardrails is being dismantled, quietly or
+                loudly, by the very powers that built them.
               </p>
               <p>
-                The children in a school in Minab who woke up on the morning of February 28 did not start a war. They are paying for one. That is the oldest and most enduring truth of armed conflict — and the one that the world's leaders seem most determined to forget.
+                The children in a school in Minab who woke up on the morning of
+                February 28 did not start a war. They are paying for one. That
+                is the oldest and most enduring truth of armed conflict — and
+                the one that the world's leaders seem most determined to forget.
               </p>
             </div>
 
             <nav className="tags-row" aria-label="Article tags">
-              {["Iran War 2026", "Operation Epic Fury", "Ukraine War", "Sudan Civil War", "Myanmar", "Middle East", "Strait of Hormuz", "Khamenei", "Global Conflict", "US Military", "Israel", "IRGC", "War Crimes", "Humanitarian Crisis"].map(t => (
-                <span key={t} className="tag-pill" tabIndex={0} role="link">{t}</span>
+              {[
+                "Iran War 2026",
+                "Operation Epic Fury",
+                "Ukraine War",
+                "Sudan Civil War",
+                "Myanmar",
+                "Middle East",
+                "Strait of Hormuz",
+                "Khamenei",
+                "Global Conflict",
+                "US Military",
+                "Israel",
+                "IRGC",
+                "War Crimes",
+                "Humanitarian Crisis",
+              ].map((t) => (
+                <span key={t} className="tag-pill" tabIndex={0} role="link">
+                  {t}
+                </span>
               ))}
             </nav>
           </div>
@@ -653,7 +772,9 @@ export default function WarBlog() {
 
       <footer role="contentinfo">
         <div className="footer-name">The Nomad Review</div>
-        <div className="footer-copy">© 2026 · All rights reserved · Independent analysis on a world at war</div>
+        <div className="footer-copy">
+          © 2026 · All rights reserved · Independent analysis on a world at war
+        </div>
       </footer>
     </>
   );
