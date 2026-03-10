@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import AdOptOutBanner from "../AdOptOutBanner";
 
 function SEOHead() {
   useEffect(() => {
@@ -272,7 +271,6 @@ export default function WarBlog() {
 
   return (
     <>
-      <AdOptOutBanner />
       <SEOHead />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');

@@ -7,9 +7,6 @@ const ADS_CONTAINER_ID = "container-9203e363952d27fa3a6d235db4898ce4";
 const SCRIPT_MARKER = "effectivegatecpm.com";
 const LOCAL_STORAGE_KEY = "nomad_ads_disabled";
 
-// Prevent rendering the overlay multiple times if the component is mounted more than once.
-let bannerAlreadyMounted = false;
-
 function removeExistingAds() {
   // Remove any ad containers inserted in index.html
   document
@@ -25,28 +22,16 @@ function removeExistingAds() {
 }
 
 export default function AdOptOutBanner() {
-  if (bannerAlreadyMounted) {
-    return null;
-  }
-
   const [adsDisabled, setAdsDisabled] = useState(false);
   const [bannerHidden, setBannerHidden] = useState(false);
 
   useEffect(() => {
-    if (bannerAlreadyMounted) {
-      return;
-    }
-    bannerAlreadyMounted = true;
-
     const stored = window.localStorage.getItem(LOCAL_STORAGE_KEY);
     if (stored === "true") {
       setAdsDisabled(true);
+      setBannerHidden(true);
       removeExistingAds();
     }
-
-    return () => {
-      bannerAlreadyMounted = false;
-    };
   }, []);
 
   const handleYes = () => {

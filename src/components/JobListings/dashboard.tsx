@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { useEffect } from "react";
-import AdOptOutBanner from "../AdOptOutBanner";
 
 const jobData = {
   id: "job_001",
@@ -171,7 +170,6 @@ export default function JobListing() {
         boxSizing: "border-box",
       }}
     >
-      <AdOptOutBanner />
       <div
         style={{
           background: "#ffffff",
