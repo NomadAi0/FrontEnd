@@ -9,27 +9,15 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@reduxjs/toolkit": "^2.7.0",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^29.5.14",
-    "@types/node": "^18.19.34",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
     "axios": "^1.9.0",
-    "firebase": "^11.6.1",
     "framer-motion": "^12.9.2",
     "lucide-react": "^0.503.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.23.1",
-    "react-scripts": "5.0.1",
     "recharts": "^2.15.3",
     "redux": "^5.0.1",
-    "serve": "^14.2.0",
-    "typescript": "4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -59,9 +47,18 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.19.15",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.3.3",
     "cross-env": "^10.1.0",
     "gh-pages": "^6.3.0",
-    "vite": "^5.4.10"
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
   }
 }

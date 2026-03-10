@@ -35,6 +35,30 @@
     <meta property="og:image" content="https://nomadai.online/og-image.jpg" />
     <meta property="og:site_name" content="Nomad.AI" />
 
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+      default-src 'self';
+      img-src 'self' https: data:;
+      script-src 'self' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline' https:;
+      connect-src 'self' https:;
+      font-src 'self' https:;
+      frame-ancestors 'none';
+      base-uri 'self';
+      object-src 'none';
+      form-action 'self';
+      "
+    />
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://nomadai.online/" />
@@ -77,25 +101,19 @@
   <body>
     <div id="root"></div>
 
-    <!-- social bar -->
-    <script src="https://pl28853778.effectivegatecpm.com/f7/62/af/f762afd6ecd9cd693c4a4002fa043f19.js"></script>
-    <!-- native banner -->
-    <script
+    <!-- <script
       async="async"
       data-cfasync="false"
       src="https://pl28855267.effectivegatecpm.com/9203e363952d27fa3a6d235db4898ce4/invoke.js"
     ></script>
     <div id="container-9203e363952d27fa3a6d235db4898ce4"></div>
-    <!-- another banner 468x 60 -->
-    <script>
-      atOptions = {
-        key: "a3a28ad93cbdb658f6ae4eef1c4f4380",
-        format: "iframe",
-        height: 60,
-        width: 468,
-        params: {},
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/a3a28ad93cbdb658f6ae4eef1c4f4380/invoke.js"></script>
+    <div id="container-9203e363952d27fa3a6d235db4898ce4"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      async="async"
+      data-cfasync="false"
+      src="https://pl28855267.effectivegatecpm.com/9203e363952d27fa3a6d235db4898ce4/invoke.js"
+    ></script>
+    <div id="container-9203e363952d27fa3a6d235db4898ce4"></div> -->
   </body>
 </html>
