@@ -9,18 +9,24 @@ const ADS_CONTAINER_ID = "container-9203e363952d27fa3a6d235db4898ce4";
 const LOCAL_STORAGE_KEY = "nomad_ads_disabled";
 
 function injectInPageAds() {
-  // Don't double-inject
-  if (document.querySelector(`#${ADS_CONTAINER_ID}`)) return;
+  console.log("injectInPageAds called");
+
+  if (document.querySelector(`#${ADS_CONTAINER_ID}`)) {
+    console.log("container already exists, skipping");
+    return;
+  }
 
   const container = document.createElement("div");
   container.id = ADS_CONTAINER_ID;
   document.body.appendChild(container);
+  console.log("container injected", container);
 
   const script = document.createElement("script");
   script.src = AD_SCRIPT_SRC;
   script.async = true;
   script.setAttribute("data-cfasync", "false");
   document.body.appendChild(script);
+  console.log("script injected", script.src);
 }
 
 function removeInPageAds() {
@@ -59,7 +65,7 @@ export default function AdOptOutBanner() {
   };
 
   const handleNo = () => {
-    // User wants to keep ads — now inject them
+    console.log("No clicked — injecting ads");
     setDecision("enabled");
     injectInPageAds();
   };
@@ -96,8 +102,8 @@ export default function AdOptOutBanner() {
           Want to disable ads?
         </h2>
         <p style={{ margin: "10px 0 18px", lineHeight: 1.5, color: "#ddd" }}>
-          Watch one short ad (2 seconds) in a new tab, then the rest of the
-          site will be ad-free. You can close the ad tab when it's done.
+          Watch one short ad (2 seconds) in a new tab, then the rest of the site
+          will be ad-free. You can close the ad tab when it's done.
         </p>
         <div style={{ display: "flex", gap: 12, justifyContent: "flex-end" }}>
           <button
