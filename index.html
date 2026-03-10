@@ -37,7 +37,18 @@
 
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https:; connect-src 'self' https:; frame-ancestors 'none';"
+      content="
+      default-src 'self';
+      img-src 'self' https: data:;
+      script-src 'self' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline' https:;
+      connect-src 'self' https:;
+      font-src 'self' https:;
+      frame-ancestors 'none';
+      base-uri 'self';
+      object-src 'none';
+      form-action 'self';
+      "
     />
 
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -46,7 +57,7 @@
       http-equiv="Referrer-Policy"
       content="strict-origin-when-cross-origin"
     />
-    
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -85,25 +96,24 @@
       gtag("config", "G-J1ZEQKQHPN");
     </script>
     <meta name="google-adsense-account" content="ca-pub-8256058454718963" />
-    <script type="module" crossorigin src="/assets/index-Ckv1Cn-a.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Bw5jqbly.css">
   </head>
 
   <body>
     <div id="root"></div>
 
-    <script
+    <!-- <script
       async="async"
       data-cfasync="false"
       src="https://pl28855267.effectivegatecpm.com/9203e363952d27fa3a6d235db4898ce4/invoke.js"
     ></script>
     <div id="container-9203e363952d27fa3a6d235db4898ce4"></div>
-    <div id="container-9203e363952d27fa3a6d235db4898ce4"></div>
+    <div id="container-9203e363952d27fa3a6d235db4898ce4"></div>
+    <script type="module" src="/src/main.tsx"></script>
     <script
       async="async"
       data-cfasync="false"
       src="https://pl28855267.effectivegatecpm.com/9203e363952d27fa3a6d235db4898ce4/invoke.js"
     ></script>
-    <div id="container-9203e363952d27fa3a6d235db4898ce4"></div>
+    <div id="container-9203e363952d27fa3a6d235db4898ce4"></div> -->
   </body>
 </html>
