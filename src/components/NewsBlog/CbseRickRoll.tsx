@@ -66,11 +66,11 @@ const shareLinks = [
 ];
 
 const funFacts = [
-  "CBSE boards are taken by ~19 million students every year — more than the entire population of the Netherlands.",
-  "The CBSE Class 12 result can literally determine which college you attend, what career you pursue, and occasionally, family dinner conversation for years.",
+  "In 2025, exactly 17,04,367 students registered for CBSE Class 12 boards — and 16,92,794 of them actually showed up to sit the exam.",
+  "The CBSE Class 12 result can literally determine which college you attend, what career you pursue, and occasionally, family dinner conversation for the next three years.",
   "Rick Astley recorded 'Never Gonna Give You Up' in 1987. It has now survived longer than most Indian governments.",
-  "This is the first known instance of a government-certified exam board accidentally becoming a meme lord.",
-  "The song has 1.5 billion YouTube views. Indian students just added several million panicked rewatches.",
+  "CBSE affiliates schools in 26 countries abroad — meaning the rickroll technically went international on exam day.",
+  "Of the 16.92 lakh students who appeared in 2025, 88.39% passed. That means over 1.96 lakh students failed — none of whom were rickrolled quite as hard as the rest.",
 ];
 
 export default function NomadAIBlogPost() {
@@ -178,7 +178,7 @@ export default function NomadAIBlogPost() {
               color: "#0a0a0a",
             }}
           >
-            {"🚨 BREAKING: CBSE RICKROLLED 19 MILLION STUDENTS · MATH EXAM · CLASS 12 · 2025 · NEVER GONNA GIVE YOU UP · WE JUST GOT BOARD-ROLLED · 🚨 BREAKING: CBSE RICKROLLED 19 MILLION STUDENTS · MATH EXAM · CLASS 12 · 2025 · NEVER GONNA GIVE YOU UP · WE JUST GOT BOARD-ROLLED · "}
+            {"🚨 BREAKING: CBSE RICKROLLED 17 LAKH STUDENTS · MATH EXAM · CLASS 12 · 2025 · NEVER GONNA GIVE YOU UP · WE JUST GOT BOARD-ROLLED · 🚨 BREAKING: CBSE RICKROLLED 17 LAKH STUDENTS · MATH EXAM · CLASS 12 · 2025 · NEVER GONNA GIVE YOU UP · WE JUST GOT BOARD-ROLLED · "}
           </div>
         </div>
 
@@ -255,7 +255,7 @@ export default function NomadAIBlogPost() {
               </span>
             </span>
             <span style={{ display: "block", color: "#f0ece0", fontSize: "clamp(36px, 6vw, 72px)" }}>
-              19 MILLION STUDENTS
+              1.7 MILLION STUDENTS
             </span>
           </h1>
 
@@ -274,7 +274,7 @@ export default function NomadAIBlogPost() {
             }}
           >
             India's most-feared national exam accidentally embedded a Rick Astley lyric into a calculus problem.
-            The internet, predictably, lost its entire mind.
+            17 lakh students opened their paper. The internet, predictably, lost its entire mind.
           </p>
 
           {/* Meta row */}
@@ -385,7 +385,7 @@ export default function NomadAIBlogPost() {
           {/* Section 1 */}
           <SectionHead emoji="📋" label="THE SETUP" />
           <p>
-            Every year, somewhere between mid-February and mid-March, approximately <strong style={{ color: "#f0ece0" }}>19 million Indian students</strong> sit down to take the CBSE (Central Board of Secondary Education) Class 12 board exams. These are not your average end-of-semester tests.
+            Every year, somewhere between mid-February and mid-March, approximately <strong style={{ color: "#f0ece0" }}>17 lakh Indian students</strong> (that's 1.7 million, for the metrically challenged) sit down to take the CBSE (Central Board of Secondary Education) Class 12 board exams. These are not your average end-of-semester tests.
           </p>
           <p>
             For international readers: imagine the SAT, the A-levels, and your entire college admissions process compressed into a single terrifying week. CBSE boards can determine which university you attend, which stream you study, and in many families — whether you get to eat dinner in peace for the next three years. The math paper, in particular, is treated with something between reverence and mortal dread.
@@ -410,7 +410,7 @@ export default function NomadAIBlogPost() {
           <FactCard
             number="01"
             title="CBSE is a big deal. Like, a REALLY big deal."
-            body="This isn't a school-level test. The Central Board of Secondary Education is a federal government body. Class 12 results are used for university admissions across the entire country. Engineering hopefuls supplement it with JEE; medical aspirants with NEET. The stakes are generationally high."
+            body="This isn't a school-level test. The Central Board of Secondary Education is a federal government body. In 2025, exactly 17,04,367 students registered — and 16,92,794 showed up. Class 12 results are used for university admissions across the entire country. Engineering hopefuls supplement it with JEE; medical aspirants with NEET. The stakes are generationally high."
           />
           <FactCard
             number="02"
