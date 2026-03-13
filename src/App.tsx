@@ -10,6 +10,7 @@ import WarBlog from "./components/NewsBlog/war.tsx";
 import GTA6CodeLeak from "./components/NewsBlog/GTA6CodeLeak.tsx";
 import AdOptOutBanner from "./components/AdOptOutBanner";
 import CBSERickRoll from "./components/NewsBlog/CbseRickRoll.tsx";
+import DataEntryACRT from "./components/JobListings/dataentryACRT.tsx";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
           <Route path="/gta6-leak" element={<GTA6LeakGP />} />
           <Route path="/war-blog" element={<WarBlog />} />
           <Route path="/gta6-code-leak" element={<GTA6CodeLeak />} />
-          <Route path="/cbse-rick-roll" element= {<CBSERickRoll/>} />
+          <Route path="/cbse-rick-roll" element={<CBSERickRoll />} />
+          <Route path="/data-entry-acrt" element={<DataEntryACRT />} />
         </Routes>
       </HashRouter>
     </Provider>

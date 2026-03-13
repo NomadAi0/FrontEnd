@@ -22,15 +22,6 @@ const glitchKeyframes = `
   100% { transform: translateY(100vh); }
 }
 
-@keyframes flicker {
-  0%, 100% { opacity: 1; }
-  92% { opacity: 1; }
-  93% { opacity: 0.4; }
-  94% { opacity: 1; }
-  96% { opacity: 0.7; }
-  97% { opacity: 1; }
-}
-
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(-1deg); }
   50% { transform: translateY(-8px) rotate(1deg); }
@@ -57,20 +48,20 @@ const glitchKeyframes = `
 }
 `;
 
-const tags = ["#RickRoll", "#CBSE2025", "#India", "#ExamSzn", "#MathFail", "#NeverGonnaGiveYouUp"];
+const tags = ["#RickRoll", "#CBSE2026", "#India", "#ExamSzn", "#MathFail", "#NeverGonnaGiveYouUp"];
 
 const shareLinks = [
-  { label: "X / Twitter", icon: "𝕏", color: "#000" },
+  { label: "X / Twitter", icon: "𝕏", color: "#1d9bf0" },
   { label: "WhatsApp", icon: "💬", color: "#25d366" },
   { label: "Reddit", icon: "🤖", color: "#ff4500" },
 ];
 
 const funFacts = [
-  "In 2025, exactly 17,04,367 students registered for CBSE Class 12 boards — and 16,92,794 of them actually showed up to sit the exam.",
-  "The CBSE Class 12 result can literally determine which college you attend, what career you pursue, and occasionally, family dinner conversation for the next three years.",
-  "Rick Astley recorded 'Never Gonna Give You Up' in 1987. It has now survived longer than most Indian governments.",
-  "CBSE affiliates schools in 26 countries abroad — meaning the rickroll technically went international on exam day.",
-  "Of the 16.92 lakh students who appeared in 2025, 88.39% passed. That means over 1.96 lakh students failed — none of whom were rickrolled quite as hard as the rest.",
+  "CBSE printed QR codes on 2.5 million Class 12 Maths papers for security verification. The verification link redirected to Rick Astley. Security remains uncompromised, apparently.",
+  "The affected paper sets were series 65/3/X, 65/4/X, and 65/5/X — but students from multiple cities confirmed the same redirect, suggesting it wasn't isolated to one print batch.",
+  "Rick Astley's 'Never Gonna Give You Up' hit 1.7 billion YouTube views as of March 2026. Indian students contributed meaningfully to this number post-exam.",
+  "CBSE introduced QR codes on papers specifically to prevent leaks. The system designed to protect the exam instead rickrolled it. Peak 2026.",
+  "Rick Astley is now 60 years old. He once joked he looked '11 years old in his dad's overcoat' in the video. He has had decades to process being the world's most famous prank.",
 ];
 
 export default function NomadAIBlogPost() {
@@ -141,14 +132,7 @@ export default function NomadAIBlogPost() {
         >
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <span style={{ fontSize: "22px", animation: "spin-slow 10s linear infinite", display: "inline-block" }}>🌐</span>
-            <span
-              style={{
-                fontFamily: "'Bebas Neue', sans-serif",
-                fontSize: "26px",
-                letterSpacing: "4px",
-                color: "#ef4444",
-              }}
-            >
+            <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "26px", letterSpacing: "4px", color: "#ef4444" }}>
               NomadAI
             </span>
           </div>
@@ -160,14 +144,7 @@ export default function NomadAIBlogPost() {
         </nav>
 
         {/* Ticker tape */}
-        <div
-          style={{
-            background: "#ef4444",
-            padding: "6px 0",
-            overflow: "hidden",
-            whiteSpace: "nowrap",
-          }}
-        >
+        <div style={{ background: "#ef4444", padding: "6px 0", overflow: "hidden", whiteSpace: "nowrap" }}>
           <div
             style={{
               display: "inline-block",
@@ -178,7 +155,7 @@ export default function NomadAIBlogPost() {
               color: "#0a0a0a",
             }}
           >
-            {"🚨 BREAKING: CBSE RICKROLLED 17 LAKH STUDENTS · MATH EXAM · CLASS 12 · 2025 · NEVER GONNA GIVE YOU UP · WE JUST GOT BOARD-ROLLED · 🚨 BREAKING: CBSE RICKROLLED 17 LAKH STUDENTS · MATH EXAM · CLASS 12 · 2025 · NEVER GONNA GIVE YOU UP · WE JUST GOT BOARD-ROLLED · "}
+            {"🚨 BREAKING: CBSE QR CODE RICKROLLED 2.5 MILLION STUDENTS · MARCH 9 2026 · CLASS 12 MATHS · NEVER GONNA GIVE YOU UP · CBSE SAYS SECURITY UNCOMPROMISED · 🚨 BREAKING: CBSE QR CODE RICKROLLED 2.5 MILLION STUDENTS · MARCH 9 2026 · CLASS 12 MATHS · NEVER GONNA GIVE YOU UP · CBSE SAYS SECURITY UNCOMPROMISED · "}
           </div>
         </div>
 
@@ -215,7 +192,7 @@ export default function NomadAIBlogPost() {
             }}
           >
             <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#ef4444", display: "inline-block" }} />
-            CULTURE · GLOBAL WTF MOMENT
+            CULTURE · GLOBAL WTF MOMENT · MARCH 2026
           </div>
 
           {/* Title */}
@@ -230,16 +207,8 @@ export default function NomadAIBlogPost() {
             }}
           >
             <span style={{ display: "block", color: "#f0ece0" }}>INDIA JUST</span>
-            <span
-              style={{
-                display: "block",
-                color: "#ef4444",
-                position: "relative",
-                WebkitTextStroke: "1px #ef4444",
-              }}
-            >
+            <span style={{ display: "block", color: "#ef4444", position: "relative", WebkitTextStroke: "1px #ef4444" }}>
               RICKROLLED
-              {/* Glitch layer */}
               <span
                 aria-hidden
                 style={{
@@ -255,7 +224,7 @@ export default function NomadAIBlogPost() {
               </span>
             </span>
             <span style={{ display: "block", color: "#f0ece0", fontSize: "clamp(36px, 6vw, 72px)" }}>
-              1.7 MILLION STUDENTS
+              2.5 MILLION STUDENTS
             </span>
           </h1>
 
@@ -273,8 +242,8 @@ export default function NomadAIBlogPost() {
               animationFillMode: "forwards",
             }}
           >
-            India's most-feared national exam accidentally embedded a Rick Astley lyric into a calculus problem.
-            17 lakh students opened their paper. The internet, predictably, lost its entire mind.
+            A QR code on India's most-feared national exam paper redirected 2.5 million students to Rick Astley on YouTube.
+            The board said security was uncompromised. The internet said otherwise.
           </p>
 
           {/* Meta row */}
@@ -291,20 +260,14 @@ export default function NomadAIBlogPost() {
             }}
           >
             <span>BY <span style={{ color: "#ef4444" }}>NOMADAI DESK</span></span>
-            <span>MARCH 2025</span>
+            <span>MARCH 10, 2026</span>
             <span>7 MIN READ</span>
             <span style={{ marginLeft: "auto", color: "#ef4444", cursor: "pointer" }}>🔖 SAVE</span>
           </div>
         </div>
 
         {/* Video embed */}
-        <div
-          style={{
-            maxWidth: "900px",
-            margin: "0 auto",
-            padding: "0 24px 60px",
-          }}
-        >
+        <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 24px 60px" }}>
           <div
             style={{
               border: "1px solid #2a2a2a",
@@ -323,28 +286,15 @@ export default function NomadAIBlogPost() {
               }}
             >
               <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#ef4444", display: "inline-block", animation: "pulse-red 2s infinite" }} />
-              <span style={{ fontSize: "11px", letterSpacing: "2px", color: "#666" }}>VIRAL FOOTAGE · CBSE MATH PAPER 2025 · STUDENT REACTION</span>
+              <span style={{ fontSize: "11px", letterSpacing: "2px", color: "#666" }}>VIRAL FOOTAGE · CBSE MATHS QR CODE · MARCH 9, 2026</span>
             </div>
             <video
               src="https://packaged-media.redd.it/0jy1s0g6j0og1/pb/m2-res_640p.mp4?m=DASHPlaylist.mpd&var=sgpssan&v=1&e=1773226800&s=67e66005fd2eedc6a642caf9e58c56b95ca0d008"
               controls
-              style={{
-                width: "100%",
-                display: "block",
-                maxHeight: "480px",
-                background: "#000",
-              }}
+              style={{ width: "100%", display: "block", maxHeight: "480px", background: "#000" }}
             />
-            <div
-              style={{
-                padding: "10px 16px",
-                fontSize: "11px",
-                color: "#444",
-                letterSpacing: "1px",
-                fontStyle: "italic",
-              }}
-            >
-              The moment 19 million students realised what happened. Via Reddit.
+            <div style={{ padding: "10px 16px", fontSize: "11px", color: "#444", letterSpacing: "1px", fontStyle: "italic" }}>
+              The QR code that sent 2.5 million students to Rick Astley mid-exam. Via Reddit.
             </div>
           </div>
         </div>
@@ -367,7 +317,7 @@ export default function NomadAIBlogPost() {
               margin: 0,
             }}
           >
-            "We are no strangers to love... or apparently, to differentiation."
+            "A QR code designed to stop exam leaks. It leaked Rick Astley."
           </p>
         </div>
 
@@ -382,24 +332,23 @@ export default function NomadAIBlogPost() {
             color: "#d0cbb8",
           }}
         >
-          {/* Section 1 */}
           <SectionHead emoji="📋" label="THE SETUP" />
           <p>
-            Every year, somewhere between mid-February and mid-March, approximately <strong style={{ color: "#f0ece0" }}>17 lakh Indian students</strong> (that's 1.7 million, for the metrically challenged) sit down to take the CBSE (Central Board of Secondary Education) Class 12 board exams. These are not your average end-of-semester tests.
+            Every year, between mid-February and mid-March, millions of Indian students sit down for CBSE Class 12 board exams — the Central Board of Secondary Education's national leaving certificate. These are not your average end-of-semester tests.
           </p>
           <p>
-            For international readers: imagine the SAT, the A-levels, and your entire college admissions process compressed into a single terrifying week. CBSE boards can determine which university you attend, which stream you study, and in many families — whether you get to eat dinner in peace for the next three years. The math paper, in particular, is treated with something between reverence and mortal dread.
+            For international readers: imagine the SAT, the A-levels, and your entire college admissions process compressed into a single terrifying week. CBSE boards determine which university you attend, which career stream you pursue, and in many families — whether you get to eat dinner in peace for the next three years. The math paper, in particular, is treated with something between reverence and mortal dread.
           </p>
           <p>
-            On March 8, 2025, students cracked open the Class 12 Mathematics paper. It was meant to be a high-stakes test of calculus, algebra, and vectors. What they got — buried in an application-based question — was <em style={{ color: "#ef4444" }}>a lyric from Rick Astley's 1987 banger, "Never Gonna Give You Up."</em>
+            On <strong style={{ color: "#f0ece0" }}>March 9, 2026</strong>, approximately <strong style={{ color: "#f0ece0" }}>2.5 million students</strong> cracked open the Class 12 Mathematics paper. It was meant to be a high-stakes test of calculus, algebra, and vectors. Printed on that paper — as part of CBSE's own anti-leak QR security system — was a code that, when scanned, redirected directly to <em style={{ color: "#ef4444" }}>Rick Astley's "Never Gonna Give You Up" on YouTube.</em>
           </p>
           <p>
-            Specifically, a passage in the question paper used <strong style={{ color: "#f0ece0" }}>"We're no strangers to love, you know the rules and so do I"</strong> as contextual text — framing a function that students then had to differentiate or integrate. The Rick Roll was not metaphorical.
+            This was not a lyric. This was not metaphorical. This was a functional QR code, embedded by the government's own exam authority, pointing at the internet's most iconic prank. Students scanned it expecting verification links. They got Rick Astley.
           </p>
 
           <BlockQuote
-            text='"Never Gonna Give You Up" has now been used in a government-certified, nationally-administered, life-determining exam. This is objectively the best timeline.'
-            source="Twitter/X user @calculus_crimes"
+            text="Of all things I expected, I didn't think I would get Rick Rolled by Big CBSE in 2026."
+            source="@chrootty on X, March 9, 2026"
           />
 
           <SectionHead emoji="🌍" label="WHY THIS IS WILD, EXPLAINED FOR NON-INDIANS" />
@@ -410,68 +359,68 @@ export default function NomadAIBlogPost() {
           <FactCard
             number="01"
             title="CBSE is a big deal. Like, a REALLY big deal."
-            body="This isn't a school-level test. The Central Board of Secondary Education is a federal government body. In 2025, exactly 17,04,367 students registered — and 16,92,794 showed up. Class 12 results are used for university admissions across the entire country. Engineering hopefuls supplement it with JEE; medical aspirants with NEET. The stakes are generationally high."
+            body="This isn't a school-level test. The Central Board of Secondary Education is a federal government body. In 2026, approximately 2.5 million students sat the Class 12 Maths paper alone. Results are used for university admissions across the entire country. Engineering hopefuls supplement it with JEE; medical aspirants with NEET. The stakes are generationally high."
           />
           <FactCard
             number="02"
-            title="Math paper = maximum stress."
-            body="The Class 12 Math paper is notoriously difficult. Students typically spend months of dedicated coaching-institute prep. Coaching culture in India is a billion-dollar industry built entirely on fear of papers like this one."
+            title="The QR code was literally a security feature."
+            body="CBSE introduced QR codes on question papers specifically to prevent leaks — if a paper was photographed early, officials could scan the code to verify authenticity. The system designed to protect the exam from internet sabotage instead delivered the internet's most famous prank directly to 2.5 million students. Affected sets included series 65/3/X, 65/4/X, and 65/5/X."
           />
           <FactCard
             number="03"
             title="Rick Astley is still very much a meme."
-            body="For those who somehow missed it: Rick Rolling is an internet prank dating to 2007 where you embed a link that unexpectedly plays 'Never Gonna Give You Up.' It remains one of the most enduring, beloved, and deeply stupid jokes on the internet. It has now breached government infrastructure."
+            body="For those who somehow missed it: Rickrolling is an internet prank dating to 2007 where you disguise a link and redirect the victim to 'Never Gonna Give You Up.' It is harmless, it is beloved, and it is absolutely not supposed to appear on official documents printed by a national education authority for 2.5 million students."
           />
 
           <SectionHead emoji="😭" label="THE STUDENT EXPERIENCE" />
           <p>
-            Imagine: you've barely slept. You've memorized 12 types of integration. Your pencil is sharpened to a surgical point. You flip to Question 14 and begin reading the passage. Somewhere in the second line, your exhausted, cortisol-flooded brain goes — <em style={{ color: "#ef4444" }}>wait.</em>
+            Imagine: you've barely slept. You've memorised 12 types of integration. Your pencil is sharpened to a surgical point. The exam starts at 10:30 AM. You notice a QR code on the paper. Maybe you scan it for verification. Maybe you scan it out of curiosity. Either way — <em style={{ color: "#ef4444" }}>Rick Astley.</em>
           </p>
           <p>
-            Within hours of the paper concluding, social media was flooded. Indian Twitter became a beautiful disaster of panicked students who had just realized what happened mid-exam, math teachers explaining they had genuinely not planned this, and the rest of the internet losing its mind in solidarity.
+            Within hours of the paper concluding, social media was flooded. Students filmed themselves scanning the QR code at home to confirm what had happened. One student posted a video showing the paper redirecting live to the music video. The hashtag <strong style={{ color: "#f0ece0" }}>#RickrollCBSE</strong> began trending. International meme pages picked it up by evening.
           </p>
           <p>
-            The delicious irony: <strong style={{ color: "#f0ece0" }}>students had to actually engage with the lyrics to answer the question.</strong> There was no skipping it. You had to read "never gonna give you up, never gonna let you down" and then calmly compute a derivative. The universe demanded it.
+            One X user summarised: <em>"CBSE bahut aage nikal gaya hain. Pehle maths ka paper difficult banakar students ko troll karta tha. Ab QR code se troll kar rha lol."</em> Translation: CBSE has evolved. First it trolled students by making the math paper hard. Now it trolls with QR codes.
           </p>
 
           <BlockQuote
-            text="I solved for x and then realised I had been Rick Rolled by the Government of India. I don't know whether to laugh or cry. I chose to do both simultaneously."
-            source="Student post on Reddit r/CBSE"
+            text='"Getting Rickrolled in a board exam paper is wild incompetence by the Central Board of Secondary Education."'
+            source="X user, March 9, 2026"
           />
 
           <SectionHead emoji="🎵" label="THE SONG, FOR THE UNINITIATED" />
           <p>
-            Rick Astley's "Never Gonna Give You Up" dropped in 1987. It peaked at #1 in 25 countries. By all accounts it should have faded into 80s nostalgia. Instead it became the internet's immortal prank currency — embedded in forum links, YouTube thumbnails, and now, apparently, national exam papers.
+            Rick Astley's "Never Gonna Give You Up" dropped in 1987. It peaked at #1 in 25 countries and won the BRIT Award for British Single of the Year. By all accounts it should have faded into 80s nostalgia. Instead it became the internet's immortal prank currency.
           </p>
           <p>
-            The song has over <strong style={{ color: "#f0ece0" }}>1.5 billion YouTube views</strong>, largely because each new generation discovers the rickroll and passes it forward like a torch of beautiful annoyance. Rick Astley himself has leaned into it with tremendous good humor over the years.
-          </p>
-          <p>
-            For CBSE 2025, we suspect several million new listens were added as shell-shocked students Googled the lyrics post-exam to confirm what they'd experienced was real.
+            The official music video crossed <strong style={{ color: "#f0ece0" }}>1 billion YouTube views in 2021</strong> and sits at <strong style={{ color: "#f0ece0" }}>1.7 billion as of March 2026</strong> — with Indian students contributing meaningfully to that number post-exam. Rick Astley himself, now 60, has spoken openly about the meme. He once joked he looked "11 years old in his dad's overcoat" in the video, and has largely embraced his status as a permanent internet fixture.
           </p>
 
-          <SectionHead emoji="🤔" label="HOW DID THIS HAPPEN?" />
+          <SectionHead emoji="🤔" label="WHAT ACTUALLY HAPPENED?" />
           <p>
-            As of publication, CBSE has not issued an official statement explaining the origin of the passage. The question paper drafting process involves committees, reviewers, and multiple layers of approval — which means somewhere in that chain, either:
+            CBSE issued an official press release on March 10, 2026 — via their X account @cbseindia29 — stating that the question papers are genuine and the security of the examination was not compromised. The Controller of Examinations, Sanyam Bhardwaj, confirmed the board was reviewing the matter and that "necessary preventive measures will be implemented to ensure that similar incidents do not occur in the future."
+          </p>
+          <p>
+            What they didn't fully explain: how a QR code meant to link to exam verification instead pointed to a YouTube rickroll. The running theories:
           </p>
           <ol style={{ paddingLeft: "24px", color: "#b0a890" }}>
-            <li style={{ marginBottom: "12px" }}>Someone <strong style={{ color: "#f0ece0" }}>deliberately</strong> embedded a Rick Roll into a national exam (legend behavior),</li>
-            <li style={{ marginBottom: "12px" }}>Someone used it as a <strong style={{ color: "#f0ece0" }}>placeholder text</strong> that accidentally made it through all review stages (chaos behavior),</li>
-            <li style={{ marginBottom: "12px" }}>Someone generated it with AI tooling that pulled from web corpora without flagging the source (very 2025 behavior).</li>
+            <li style={{ marginBottom: "12px" }}>A <strong style={{ color: "#f0ece0" }}>vendor or printing partner</strong> substituted or corrupted the QR code during the printing process,</li>
+            <li style={{ marginBottom: "12px" }}>A <strong style={{ color: "#f0ece0" }}>QR generation tool</strong> was compromised or pointed at a wrong URL upstream,</li>
+            <li style={{ marginBottom: "12px" }}>Someone in the supply chain is an <strong style={{ color: "#f0ece0" }}>absolute legend</strong> whose name we will never know.</li>
           </ol>
           <p>
-            None of these explanations are boring. All of them are incredible.
+            None of these explanations are boring. The fact that it affected multiple paper series across multiple cities suggests this was not a single printer's mistake.
           </p>
 
           <SectionHead emoji="🌐" label="THE GLOBAL RESONANCE" />
           <p>
-            International reactions to the story have been overwhelmingly warm. The CBSE rickroll hit that rare sweet spot of internet virality where the joke is universally legible — everyone's been rickrolled, everyone understands exam stress, and the combination of the two is the kind of absurdist comedy that transcends language.
+            International reactions were overwhelmingly warm. The CBSE rickroll hit that rare sweet spot of internet virality where the joke is universally legible — everyone's been rickrolled, everyone understands exam stress, and the combination of the two is the kind of absurdist comedy that transcends language and timezone.
           </p>
           <p>
-            British, American, Australian, and European education Twitter briefly became one unified entity processing the same feeling: <em style={{ color: "#ef4444" }}>respect.</em>
+            British, American, Australian, and European education accounts on X briefly became one unified entity processing the same emotion: <em style={{ color: "#ef4444" }}>respect.</em>
           </p>
           <p>
-            Rick Astley, for his part, had not yet publicly commented at time of writing. We can only hope.
+            Rick Astley had not issued a response at time of publication. We remain hopeful.
           </p>
 
           {/* Fun facts rotator */}
@@ -485,9 +434,7 @@ export default function NomadAIBlogPost() {
               minHeight: "120px",
             }}
           >
-            <div style={{ fontSize: "11px", color: "#ef4444", letterSpacing: "2px", marginBottom: "12px" }}>
-              DID YOU KNOW
-            </div>
+            <div style={{ fontSize: "11px", color: "#ef4444", letterSpacing: "2px", marginBottom: "12px" }}>DID YOU KNOW</div>
             <p
               key={activeFactIdx}
               style={{
@@ -521,7 +468,10 @@ export default function NomadAIBlogPost() {
 
           <SectionHead emoji="🏁" label="THE VERDICT" />
           <p>
-            History will remember 2025 as the year Rick Astley conquered the last unconquered frontier: the Indian government education apparatus. Students who solved the rickroll question were not just demonstrating mathematical proficiency — they were unknowing participants in a 38-year-old pop culture loop that somehow just keeps finding new hosts.
+            History will remember 2026 as the year CBSE's anti-leak security system became the leak — not of question papers, but of Rick Astley's eternal presence into the Indian education apparatus. The QR code designed to protect the exam instead made it immortal.
+          </p>
+          <p>
+            Students who scanned that code were not just taking a maths exam. They were unknowing participants in a 39-year-old pop culture loop that has now breached every remaining frontier: forums, YouTube, social media, and now, government-administered examinations.
           </p>
           <p>
             If you're reading this and you've never been rickrolled: statistically, this article may be the moment. We are so sorry. You're welcome.
@@ -535,7 +485,7 @@ export default function NomadAIBlogPost() {
               marginTop: "32px",
             }}
           >
-            WE'RE NO STRANGERS TO LOVE. YOU KNOW THE RULES.
+            SECURITY UNCOMPROMISED. DIGNITY: ANOTHER MATTER.
           </p>
 
           {/* Tags */}
@@ -640,19 +590,11 @@ export default function NomadAIBlogPost() {
             letterSpacing: "2px",
           }}
         >
-          <div
-            style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "36px",
-              color: "#ef4444",
-              letterSpacing: "8px",
-              marginBottom: "8px",
-            }}
-          >
+          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "36px", color: "#ef4444", letterSpacing: "8px", marginBottom: "8px" }}>
             NOMADAI
           </div>
           <p>CULTURE · TECH · TRAVEL · FROM EVERYWHERE · FOR EVERYONE</p>
-          <p style={{ marginTop: "8px" }}>© 2025 NomadAI · WE NEVER GIVE YOU UP</p>
+          <p style={{ marginTop: "8px" }}>© 2026 NomadAI · WE NEVER GIVE YOU UP</p>
         </footer>
       </div>
     </>
@@ -661,23 +603,9 @@ export default function NomadAIBlogPost() {
 
 function SectionHead({ emoji, label }: { emoji: string; label: string }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "12px",
-        margin: "48px 0 20px",
-      }}
-    >
+    <div style={{ display: "flex", alignItems: "center", gap: "12px", margin: "48px 0 20px" }}>
       <span style={{ fontSize: "20px" }}>{emoji}</span>
-      <span
-        style={{
-          fontFamily: "'Bebas Neue', sans-serif",
-          fontSize: "18px",
-          letterSpacing: "4px",
-          color: "#ef4444",
-        }}
-      >
+      <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "18px", letterSpacing: "4px", color: "#ef4444" }}>
         {label}
       </span>
       <div style={{ flex: 1, height: "1px", background: "#222" }} />
@@ -710,34 +638,15 @@ function BlockQuote({ text, source }: { text: string; source: string }) {
       >
         "
       </span>
-      <p
-        style={{
-          fontFamily: "'Instrument Serif', serif",
-          fontStyle: "italic",
-          fontSize: "18px",
-          color: "#f0ece0",
-          margin: "0 0 12px",
-          lineHeight: "1.7",
-        }}
-      >
+      <p style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", fontSize: "18px", color: "#f0ece0", margin: "0 0 12px", lineHeight: "1.7" }}>
         {text}
       </p>
-      <p style={{ margin: 0, fontSize: "11px", color: "#666", letterSpacing: "1px" }}>
-        — {source}
-      </p>
+      <p style={{ margin: 0, fontSize: "11px", color: "#666", letterSpacing: "1px" }}>— {source}</p>
     </div>
   );
 }
 
-function FactCard({
-  number,
-  title,
-  body,
-}: {
-  number: string;
-  title: string;
-  body: string;
-}) {
+function FactCard({ number, title, body }: { number: string; title: string; body: string }) {
   return (
     <div
       style={{
@@ -753,26 +662,9 @@ function FactCard({
       onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "#ef4444")}
       onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "#1e1e1e")}
     >
-      <div
-        style={{
-          fontFamily: "'Bebas Neue', sans-serif",
-          fontSize: "36px",
-          color: "#ef444440",
-          lineHeight: 1,
-        }}
-      >
-        {number}
-      </div>
+      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "36px", color: "#ef444440", lineHeight: 1 }}>{number}</div>
       <div>
-        <div
-          style={{
-            fontFamily: "'Bebas Neue', sans-serif",
-            fontSize: "15px",
-            letterSpacing: "2px",
-            color: "#f0ece0",
-            marginBottom: "8px",
-          }}
-        >
+        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "15px", letterSpacing: "2px", color: "#f0ece0", marginBottom: "8px" }}>
           {title}
         </div>
         <p style={{ margin: 0, color: "#888", fontSize: "13px", lineHeight: "1.7" }}>{body}</p>
